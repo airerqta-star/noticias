@@ -10,6 +10,17 @@
     "archivo": "articulos/2026-03-bienvenida-portal.html",
     "destacada": true
   },
+   {
+    "id": "2026-03-Curso-de-Capacitación-Inspectores-Municipales",
+    "titulo": "Se dictará un Curso de Capacitación para Inspectores",
+    "resumen": "La Secretaría de Control Público pone en marcha un Curso de Capacitación para Inspectores Municipales. El mismo se realizará a través de una plataforma on-line, en modalidad híbrida, organizado por las áreas Juzgado Municipal de Faltas y Agencia Gubernamental.",
+    "area": "AGC",
+    "autor": "Dr. Ricardo Franco",
+    "fecha": "26/03/2026",
+    "imagen": "https://res.cloudinary.com/dthg9wo6r/image/upload/v1774551347/curso-capacitacion-miniatura_mkbp2r.jpg",
+    "archivo": "articulos/2026-03-Capacitación-inspectores.html",
+    "destacada": false
+  }
   {
     "id": "2026-03-operativo-habilitaciones-centro",
     "titulo": "Operativo de control en locales comerciales del microcentro",
