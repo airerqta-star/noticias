@@ -1,0 +1,68 @@
+[
+  {
+    "id": "2026-03-bienvenida-portal",
+    "titulo": "La AGC lanza su portal oficial de noticias",
+    "resumen": "La Agencia Gubernamental de Control de la Municipalidad de Reconquista pone en marcha su canal institucional de comunicación para mantener informada a la ciudadanía sobre las acciones de sus cinco áreas.",
+    "area": "AGC",
+    "autor": "Dr. Ricardo Franco",
+    "fecha": "26/03/2026",
+    "imagen": "https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=1200&q=80",
+    "archivo": "articulos/2026-03-bienvenida-portal.html",
+    "destacada": true
+  },
+  {
+    "id": "2026-03-operativo-habilitaciones-centro",
+    "titulo": "Operativo de control en locales comerciales del microcentro",
+    "resumen": "El área de Habilitaciones realizó un relevamiento exhaustivo de 47 locales comerciales en el casco céntrico, verificando el cumplimiento de requisitos habilitantes vigentes.",
+    "area": "Habilitaciones",
+    "autor": "Área de Habilitaciones",
+    "fecha": "24/03/2026",
+    "imagen": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80",
+    "archivo": "articulos/2026-03-operativo-habilitaciones-centro.html",
+    "destacada": false
+  },
+  {
+    "id": "2026-03-mediacion-acuerdo-barrio-belgrano",
+    "titulo": "Mediación comunitaria resolvió conflicto vecinal en Barrio Belgrano",
+    "resumen": "A través de tres sesiones de mediación, el equipo de la Dirección logró un acuerdo entre partes en disputa por uso de espacios comunes, evitando la judicialización del conflicto.",
+    "area": "Mediación Comunitaria",
+    "autor": "Área de Mediación Comunitaria",
+    "fecha": "21/03/2026",
+    "imagen": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80",
+    "archivo": "articulos/2026-03-mediacion-acuerdo-barrio-belgrano.html",
+    "destacada": false
+  },
+  {
+    "id": "2026-03-inspeccion-higiene-urbana",
+    "titulo": "Inspección General intensifica controles de higiene urbana en zonas periféricas",
+    "resumen": "Durante la semana se realizaron inspecciones en más de 80 propiedades de los barrios norte y sur, labrándose actas por incumplimiento de la normativa de higiene y salubridad.",
+    "area": "Inspección General",
+    "autor": "Área de Inspección General",
+    "fecha": "19/03/2026",
+    "imagen": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+    "archivo": "articulos/2026-03-inspeccion-higiene-urbana.html",
+    "destacada": false
+  },
+  {
+    "id": "2026-03-assal-control-bromatologico",
+    "titulo": "ASSAL realizó controles bromatológicos en el Mercado Municipal",
+    "resumen": "El equipo técnico de ASSAL llevó a cabo la inspección periódica de puestos del Mercado Municipal, verificando condiciones de almacenamiento, manipulación y habilitación de productos alimenticios.",
+    "area": "ASSAL",
+    "autor": "Área ASSAL",
+    "fecha": "17/03/2026",
+    "imagen": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80",
+    "archivo": "articulos/2026-03-assal-control-bromatologico.html",
+    "destacada": false
+  },
+  {
+    "id": "2026-03-reunion-coordinacion-areas",
+    "titulo": "Reunión de coordinación entre las cinco áreas de la AGC",
+    "resumen": "El Director de la Agencia encabezó la reunión mensual de coordinación donde se establecieron prioridades operativas para el segundo trimestre del año.",
+    "area": "AGC",
+    "autor": "Dr. Ricardo Franco",
+    "fecha": "15/03/2026",
+    "imagen": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80",
+    "archivo": "articulos/2026-03-reunion-coordinacion-areas.html",
+    "destacada": false
+  }
+]

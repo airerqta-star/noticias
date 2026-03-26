@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AGC Noticias · Municipalidad de Reconquista</title>
+  <meta name="description" content="Portal oficial de noticias de la Agencia Gubernamental de Control — Municipalidad de Reconquista, Santa Fe." />
+  <!-- Open Graph -->
+  <meta property="og:title"       content="AGC Noticias · Municipalidad de Reconquista" />
+  <meta property="og:description" content="Portal oficial de noticias de la Agencia Gubernamental de Control." />
+  <meta property="og:type"        content="website" />
+  <!-- Favicon placeholder -->
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <!-- Estilos -->
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+  <!-- ── HEADER ───────────────────────────────────────────── -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <div class="header-logo-placeholder">AGC</div>
+        <div class="header-titles">
+          <span class="header-name">AGC — Municipalidad de Reconquista</span>
+          <span class="header-sub">Portal de Noticias Institucional</span>
+        </div>
+      </div>
+      <span class="header-date" id="header-date"></span>
+    </div>
+  </header>
+
+  <!-- ── FILTROS POR ÁREA ──────────────────────────────────── -->
+  <nav class="filters-bar" aria-label="Filtrar por área">
+    <div class="filters-inner" id="filters-inner">
+      <!-- generados dinámicamente -->
+    </div>
+  </nav>
+
+  <!-- ── CONTENIDO PRINCIPAL ──────────────────────────────── -->
+  <main class="main-content" id="main-content">
+    <!-- Hero -->
+    <section class="hero-section" id="hero-section" style="display:none;">
+      <!-- Hero principal -->
+      <div class="hero-main" id="hero-main" role="button" tabindex="0">
+        <img class="hero-main-img" id="hero-main-img" src="" alt="" />
+        <div class="hero-main-overlay"></div>
+        <div class="hero-main-content">
+          <span class="hero-area-badge" id="hero-main-badge"></span>
+          <h1 class="hero-title" id="hero-main-title"></h1>
+          <div class="hero-meta" id="hero-main-meta"></div>
+        </div>
+      </div>
+      <!-- Sidebar hero -->
+      <div class="hero-sidebar" id="hero-sidebar">
+        <!-- generado dinámicamente -->
+      </div>
+    </section>
+
+    <!-- Grilla de noticias -->
+    <section>
+      <div class="section-header">
+        <h2 class="section-title" id="section-title">Últimas noticias</h2>
+        <span class="section-count" id="section-count"></span>
+      </div>
+      <div class="news-grid" id="news-grid">
+        <!-- generado dinámicamente -->
+      </div>
+    </section>
+  </main>
+
+  <!-- ── FOOTER ────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <strong>Agencia Gubernamental de Control</strong><br />
+        Secretaría de Control Público · Municipalidad de Reconquista, Santa Fe
+      </div>
+      <div class="footer-powered">
+        POWERED BY CLAUDE · Anthropic AI
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── JAVASCRIPT ────────────────────────────────────────── -->
+  <script>
+  // ── Fecha en el header ───────────────────────────────────
+  (function(){
+    const d = new Date();
+    const opts = { weekday:'long', year:'numeric', month:'long', day:'numeric' };
+    document.getElementById('header-date').textContent =
+      d.toLocaleDateString('es-AR', opts);
+  })();
+
+  // ── Colores por área ─────────────────────────────────────
+  const AREA_COLORS = {
+    'AGC':                  '#7B1C2E',
+    'Inspección General':   '#1A3A5C',
+    'Habilitaciones':       '#2D6A4F',
+    'ASSAL':                '#5C3A1A',
+    'Mediación Comunitaria':'#4A1A5C',
+  };
+
+  function areaColor(area) {
+    return AREA_COLORS[area] || '#555';
+  }
+
+  // ── Cargar y renderizar noticias ─────────────────────────
+  let todasLasNoticias = [];
+  let filtroActivo = 'Todas';
+
+  fetch('noticias.json')
+    .then(r => r.json())
+    .then(data => {
+      todasLasNoticias = data;
+      construirFiltros(data);
+      renderizar('Todas');
+    })
+    .catch(err => {
+      console.error('Error cargando noticias.json:', err);
+      document.getElementById('news-grid').innerHTML =
+        '<div class="no-results"><h3>No se pudieron cargar las noticias</h3><p>Verificá que el archivo noticias.json existe y tiene formato válido.</p></div>';
+    });
+
+  // ── Construir tabs de filtro ─────────────────────────────
+  function construirFiltros(data) {
+    const areas = ['Todas', ...Object.keys(AREA_COLORS)];
+    const container = document.getElementById('filters-inner');
+    container.innerHTML = '';
+    areas.forEach(area => {
+      // Verificar que existe al menos una nota de esa área (o es "Todas")
+      if (area !== 'Todas' && !data.some(n => n.area === area)) return;
+      const btn = document.createElement('button');
+      btn.className = 'filter-btn' + (area === 'Todas' ? ' active' : '');
+      btn.textContent = area;
+      btn.dataset.area = area;
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        filtroActivo = area;
+        renderizar(area);
+      });
+      container.appendChild(btn);
+    });
+  }
+
+  // ── Renderizar hero + grilla según filtro ────────────────
+  function renderizar(area) {
+    const noticias = area === 'Todas'
+      ? todasLasNoticias
+      : todasLasNoticias.filter(n => n.area === area);
+
+    // Actualizar título de sección
+    document.getElementById('section-title').textContent =
+      area === 'Todas' ? 'Últimas noticias' : area;
+    document.getElementById('section-count').textContent =
+      noticias.length + (noticias.length === 1 ? ' nota' : ' notas');
+
+    // ── Hero: solo cuando filtramos "Todas" o hay ≥ 4 notas ──
+    const heroSection = document.getElementById('hero-section');
+    if (area === 'Todas' && noticias.length >= 1) {
+      heroSection.style.display = '';
+      renderizarHero(noticias);
+      renderizarGrilla(noticias.slice(4));
+    } else {
+      heroSection.style.display = 'none';
+      renderizarGrilla(noticias);
+    }
+  }
+
+  // ── Hero ─────────────────────────────────────────────────
+  function renderizarHero(noticias) {
+    const principal = noticias[0];
+    const sidebar   = noticias.slice(1, 4);
+
+    // Hero principal
+    const heroMain = document.getElementById('hero-main');
+    document.getElementById('hero-main-img').src = principal.imagen || '';
+    document.getElementById('hero-main-img').alt = principal.titulo;
+    const badge = document.getElementById('hero-main-badge');
+    badge.textContent = principal.area;
+    badge.style.background = areaColor(principal.area);
+    document.getElementById('hero-main-title').textContent = principal.titulo;
+    document.getElementById('hero-main-meta').innerHTML =
+      `<span>📅 ${principal.fecha}</span><span>✍️ ${principal.autor}</span>`;
+    heroMain.onclick = () => location.href = principal.archivo;
+    heroMain.onkeydown = e => { if (e.key === 'Enter') location.href = principal.archivo; };
+
+    // Sidebar
+    const sb = document.getElementById('hero-sidebar');
+    sb.innerHTML = '';
+    if (sidebar.length === 0) {
+      document.getElementById('hero-section').style.gridTemplateColumns = '1fr';
+    } else {
+      document.getElementById('hero-section').style.gridTemplateColumns = '';
+    }
+    sidebar.forEach(nota => {
+      const card = document.createElement('div');
+      card.className = 'hero-side-card';
+      card.setAttribute('role','button');
+      card.setAttribute('tabindex','0');
+      card.innerHTML = `
+        <img class="hero-side-img" src="${nota.imagen || ''}" alt="${nota.titulo}" loading="lazy" />
+        <div class="hero-side-overlay"></div>
+        <div class="hero-side-content">
+          <span class="hero-side-badge" style="background:${areaColor(nota.area)}">${nota.area}</span>
+          <div class="hero-side-title">${nota.titulo}</div>
+        </div>`;
+      card.onclick = () => location.href = nota.archivo;
+      card.onkeydown = e => { if (e.key === 'Enter') location.href = nota.archivo; };
+      sb.appendChild(card);
+    });
+  }
+
+  // ── Grilla ───────────────────────────────────────────────
+  function renderizarGrilla(noticias) {
+    const grid = document.getElementById('news-grid');
+    grid.innerHTML = '';
+
+    if (noticias.length === 0) {
+      grid.innerHTML = '<div class="no-results"><h3>Sin noticias en esta área</h3><p>Seleccioná otra área o revisá más tarde.</p></div>';
+      return;
+    }
+
+    noticias.forEach((nota, i) => {
+      const card = document.createElement('article');
+      card.className = 'news-card';
+      card.style.animationDelay = (i * 60) + 'ms';
+      card.setAttribute('role','button');
+      card.setAttribute('tabindex','0');
+      card.innerHTML = `
+        <div class="card-img-wrap">
+          <img class="card-img" src="${nota.imagen || ''}" alt="${nota.titulo}" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <div class="card-area" style="color:${areaColor(nota.area)}">${nota.area}</div>
+          <h3 class="card-title">${nota.titulo}</h3>
+          <p class="card-summary">${nota.resumen}</p>
+          <div class="card-footer">
+            <span class="card-fecha">📅 ${nota.fecha}</span>
+            <span class="card-autor">${nota.autor}</span>
+          </div>
+        </div>`;
+      card.onclick = () => location.href = nota.archivo;
+      card.onkeydown = e => { if (e.key === 'Enter') location.href = nota.archivo; };
+      grid.appendChild(card);
+    });
+  }
+  </script>
+
+</body>
+</html>
