@@ -10,8 +10,7 @@
   "archivo": "articulos/2026-03-peligro-derrumbe-amanebar-1219.html"
   "destacada": true
 },
-  
-  {
+{
     "id": "2026-03-bienvenida-portal",
     "titulo": "La AGC lanza su portal oficial de noticias",
     "resumen": "La Agencia Gubernamental de Control de la Municipalidad de Reconquista pone en marcha su canal institucional de comunicación para mantener informada a la ciudadanía sobre las acciones de sus cinco áreas.",
@@ -21,7 +20,7 @@
     "imagen": "https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=1200&q=80",
     "archivo": "articulos/2026-03-bienvenida-portal.html",
     "destacada": false
-  },
+},
 {
   "id": "2026-03-notificacion-higiene-barbosa",
   "titulo": "Notificación por falta de higiene y salubridad — Pasaje 41 N.º 4140, Barrio Nuevo",
