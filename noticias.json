@@ -1,4 +1,16 @@
 [
+{
+  "id": "2026-03-peligro-derrumbe-amanebar-1219",
+  "titulo": "Peligro de derrumbe de alero en calle Amanebar 1219",
+  "resumen": "La AGC intervino ante el riesgo de derrumbe de un alero sobre la línea de vereda. Se solicitó evaluación técnica urgente a Obras Particulares e identificación del titular del inmueble.",
+  "area": "Inspección General",
+  "autor": "Dr. Ricardo Franco",
+  "fecha": "29/03/2026",
+  "imagen": "https://res.cloudinary.com/dthg9wo6r/image/upload/v1774717169/miniaturaamebanar1219_avfrmr.jpg",
+  "archivo": "articulos/2026-03-peligro-derrumbe-amanebar-1219.html"
+  "destacada": true
+},
+  
   {
     "id": "2026-03-bienvenida-portal",
     "titulo": "La AGC lanza su portal oficial de noticias",
@@ -8,7 +20,7 @@
     "fecha": "26/03/2026",
     "imagen": "https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=1200&q=80",
     "archivo": "articulos/2026-03-bienvenida-portal.html",
-    "destacada": true
+    "destacada": false
   },
 {
   "id": "2026-03-notificacion-higiene-barbosa",
