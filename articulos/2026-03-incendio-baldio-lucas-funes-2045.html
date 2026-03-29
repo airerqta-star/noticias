@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Incendio en baldío de calle Lucas Funes 2045, Barrio Platense · AGC Noticias</title>
+  <meta name="description" content="Bomberos controló un incendio en un pastizal en Lucas Funes 2045, Barrio Platense. Inspección General registró el evento y procederá a notificar a los propietarios linderos." />
+
+  <!-- ── Open Graph ── -->
+  <meta property="og:type"         content="article" />
+  <meta property="og:site_name"    content="AGC Noticias" />
+  <meta property="og:locale"       content="es_AR" />
+  <meta property="og:url"          content="https://TU-USUARIO.github.io/agc-noticias/articulos/2026-03-incendio-baldio-lucas-funes-2045.html" />
+  <meta property="og:title"        content="Incendio en baldío de calle Lucas Funes 2045, Barrio Platense" />
+  <meta property="og:description"  content="Bomberos controló un incendio en un pastizal. Inspección General registró el evento y notificará a los propietarios linderos." />
+  <meta property="og:image"        content="https://res.cloudinary.com/dthg9wo6r/image/upload/v1774804614/incendio-baldio-lucasfunes2045_ihs7ve.jpg" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt"    content="Incendio en baldío — Calle Lucas Funes 2045, Barrio Platense, Reconquista" />
+  <meta property="article:published_time" content="2026-03-30T12:00:00-03:00" />
+  <meta property="article:author"         content="Agencia Gubernamental de Control" />
+  <meta property="article:section"        content="Inspección General" />
+
+  <!-- ── Twitter / X Cards ── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Incendio en baldío de calle Lucas Funes 2045, Barrio Platense" />
+  <meta name="twitter:description" content="Bomberos controló un incendio en un pastizal. Inspección General registró el evento y notificará a los propietarios linderos." />
+  <meta name="twitter:image"       content="https://res.cloudinary.com/dthg9wo6r/image/upload/v1774804614/incendio-baldio-lucasfunes2045_ihs7ve.jpg" />
+  <meta name="twitter:image:alt"   content="Incendio en baldío — Calle Lucas Funes 2045, Barrio Platense, Reconquista" />
+
+  <!-- Favicon con logo AGC -->
+  <link rel="icon" href="https://res.cloudinary.com/dthg9wo6r/image/upload/v1763866260/logoagc_jkb5my.jpg" type="image/jpeg" />
+  <link rel="stylesheet" href="../assets/style.css" />
+
+  <style>
+    /* ── Bloque de advertencia ── */
+    .alert-box {
+      background: #FFF3CD;
+      border-left: 4px solid #C8922A;
+      border-radius: 0 6px 6px 0;
+      padding: 16px 20px;
+      margin: 1.8em 0;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      color: #5C3A1A;
+      line-height: 1.55;
+    }
+    .alert-box strong { color: #3D2200; }
+
+    /* ── Ficha técnica ── */
+    .dato-tecnico {
+      background: var(--color-surface-alt);
+      border-radius: 6px;
+      padding: 18px 22px;
+      margin: 1.8em 0;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+    }
+    .dato-tecnico h3 {
+      font-size: 13px !important;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: var(--color-text-muted) !important;
+      margin: 0 0 10px !important;
+      font-family: 'DM Sans', sans-serif !important;
+    }
+    .dato-tecnico ul { margin: 0; padding-left: 1.2em; }
+    .dato-tecnico li { margin-bottom: 4px; color: var(--color-text-mid); }
+
+    /* ── Galería carrusel horizontal ── */
+    .gallery-section { margin: 2em 0 1em; }
+    .gallery-scroll {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 10px;
+      cursor: grab;
+    }
+    .gallery-scroll:active { cursor: grabbing; }
+    .gallery-scroll::-webkit-scrollbar { height: 5px; }
+    .gallery-scroll::-webkit-scrollbar-track { background: var(--color-surface-alt); border-radius: 10px; }
+    .gallery-scroll::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 10px; }
+    .gallery-item {
+      flex: 0 0 auto;
+      width: 320px;
+      height: 220px;
+      scroll-snap-align: start;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      position: relative;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .35s ease;
+    }
+    .gallery-item:hover img { transform: scale(1.04); }
+
+    /* ── Lightbox ── */
+    .gallery-item { cursor: zoom-in; }
+    .lightbox-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.92);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox-overlay.active { display: flex; }
+    .lightbox-img {
+      max-width: 92vw;
+      max-height: 88vh;
+      object-fit: contain;
+      border-radius: 4px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+    }
+    .lightbox-close {
+      position: fixed;
+      top: 18px; right: 22px;
+      font-size: 36px;
+      color: #fff;
+      cursor: pointer;
+      line-height: 1;
+      opacity: 0.8;
+      background: none;
+      border: none;
+      transition: opacity .2s;
+    }
+    .lightbox-close:hover { opacity: 1; }
+    .lightbox-nav {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 42px;
+      color: #fff;
+      cursor: pointer;
+      background: none;
+      border: none;
+      opacity: 0.7;
+      padding: 0 16px;
+      transition: opacity .2s;
+      line-height: 1;
+    }
+    .lightbox-nav:hover { opacity: 1; }
+    .lightbox-prev { left: 8px; }
+    .lightbox-next { right: 8px; }
+    .lightbox-counter {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 0.5px;
+    }
+    .gallery-hint {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      color: var(--color-text-muted);
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    @media (max-width: 600px) {
+      .gallery-item { width: 260px; height: 185px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── LIGHTBOX ─────────────────────────────────────────── -->
+  <div class="lightbox-overlay" id="lightbox">
+    <button class="lightbox-close" id="lb-close" aria-label="Cerrar">×</button>
+    <button class="lightbox-nav lightbox-prev" id="lb-prev" aria-label="Anterior">‹</button>
+    <img class="lightbox-img" id="lb-img" src="" alt="" />
+    <button class="lightbox-nav lightbox-next" id="lb-next" aria-label="Siguiente">›</button>
+    <div class="lightbox-counter" id="lb-counter"></div>
+  </div>
+
+  <!-- ── HEADER ──────────────────────────────────────────── -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <img src="https://res.cloudinary.com/dthg9wo6r/image/upload/v1763866260/logoagc_jkb5my.jpg"
+             alt="Logo AGC" class="header-logo" />
+        <div class="header-titles">
+          <span class="header-name">AGC — Municipalidad de Reconquista</span>
+          <span class="header-sub">Portal de Noticias Institucional</span>
+        </div>
+      </div>
+      <a href="../index.html" class="header-back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+        Volver al portal
+      </a>
+    </div>
+  </header>
+
+  <!-- ── ARTÍCULO ─────────────────────────────────────────── -->
+  <main>
+    <article class="article-wrap">
+
+      <span class="article-area-badge" style="background:#1A3A5C">Inspección General</span>
+
+      <h1 class="article-title">
+        Incendio en baldío de calle Lucas Funes 2045, Barrio Platense
+      </h1>
+
+      <div class="article-meta">
+        <div class="article-meta-item">
+          <span class="article-meta-label">Fecha</span>
+          <span class="article-meta-value">30/03/2026</span>
+        </div>
+        <div class="article-meta-item">
+          <span class="article-meta-label">Emitido por</span>
+          <span class="article-meta-value">Agencia Gubernamental de Control</span>
+        </div>
+        <div class="article-meta-item">
+          <span class="article-meta-label">Área</span>
+          <span class="article-meta-value">Inspección General</span>
+        </div>
+      </div>
+
+      <img class="article-featured-img"
+           src="https://res.cloudinary.com/dthg9wo6r/image/upload/v1774803874/incendio-baldio-lucasfunes_ax3h2s.jpg"
+           alt="Incendio en baldío — Calle Lucas Funes 2045, Barrio Platense" />
+
+      <div class="article-body">
+
+        <p>
+          En horas del mediodía de este domingo, se produjo un <strong>incendio en un pastizal</strong>
+          ubicado en calle Lucas Funes N.º 2045, Barrio Platense de la ciudad de Reconquista.
+          Personal del <strong>Cuerpo de Bomberos</strong> se constituyó en el lugar y logró
+          controlar el foco ígneo, evitando su propagación a las propiedades linderas.
+        </p>
+
+        <p>
+          De manera simultánea, agentes del área de <strong>Inspección General</strong> de la
+          Agencia Gubernamental de Control (AGC) se hicieron presentes en el lugar para documentar
+          el evento y registrarlo en el sistema MuniDigital.
+        </p>
+
+        <div class="alert-box">
+          🔥 <strong>Incidente N.º 11993055</strong> — Registrado en sistema MuniDigital.
+          Los baldíos con malezas y acumulación de material seco son focos de alto riesgo ante
+          temperaturas elevadas. Un foco descontrolado puede afectar viviendas y personas en
+          cuestión de minutos.
+        </div>
+
+        <h2>Malezas y baldíos: un riesgo que se puede prevenir</h2>
+
+        <p>
+          Este episodio pone en evidencia los riesgos concretos que generan los inmuebles
+          abandonados o descuidados en el tejido urbano. La acumulación de pastizales secos
+          actúa como combustible ante cualquier fuente de calor o ignición —accidental o
+          intencional— y puede derivar en situaciones de emergencia que comprometan la
+          seguridad de vecinos y propiedades cercanas.
+        </p>
+
+        <p>
+          La AGC viene insistiendo en la importancia del <strong>desmalezado y mantenimiento
+          de los inmuebles baldíos</strong> como medida preventiva esencial, tanto en lo que
+          refiere a la proliferación de vectores sanitarios como a la prevención de incendios.
+        </p>
+
+        <h2>Acciones a seguir</h2>
+
+        <p>
+          Con el foco controlado por Bomberos, la AGC iniciará el procedimiento de
+          <strong>notificación formal al propietario del inmueble incendiado</strong> y a
+          los titulares de los lotes linderos que presenten condiciones similares de riesgo,
+          exigiéndoles la realización inmediata de las tareas de limpieza, desmalezado y
+          descacharrado que correspondan.
+        </p>
+
+        <p>
+          El incumplimiento de dichas intimaciones habilitará a la Municipalidad a aplicar
+          las sanciones previstas en el <strong>Código Municipal de Faltas (Ordenanza N.º 4.909/03)</strong>,
+          incluyendo multas de entre <strong>50 y 5.000 Unidades de Falta (UF)</strong> según
+          la gravedad de la infracción, y a realizar las tareas de saneamiento
+          por administración a costo del titular.
+        </p>
+
+        <div class="dato-tecnico">
+          <h3>Datos del incidente</h3>
+          <ul>
+            <li><strong>Ubicación:</strong> Calle Lucas Funes N.º 2045, Barrio Platense, Reconquista</li>
+            <li><strong>N.º de Incidente:</strong> 11993055 (Sistema MuniDigital)</li>
+            <li><strong>Fecha y hora:</strong> 30/03/2026 — mediodía</li>
+            <li><strong>Organismos intervinientes:</strong> Cuerpo de Bomberos / AGC — Inspección General</li>
+            <li><strong>Normativa aplicable:</strong> Ordenanza N.º 4.909/03, Art. 155° Bis</li>
+          </ul>
+        </div>
+
+        <!-- ── GALERÍA ── -->
+        <h2>Registro fotográfico</h2>
+        <div class="gallery-section">
+          <div class="gallery-scroll" id="gallery">
+            <div class="gallery-item" data-index="0">
+              <img src="https://res.cloudinary.com/dthg9wo6r/image/upload/v1774804756/incendio-baldio-c-2_tnnnhu.jpg"
+                   alt="Incendio baldío Lucas Funes — foto 1" loading="lazy" />
+            </div>
+            <div class="gallery-item" data-index="1">
+              <img src="https://res.cloudinary.com/dthg9wo6r/image/upload/v1774804755/incendio-baldio-v-1_rwppxm.jpg"
+                   alt="Incendio baldío Lucas Funes — foto 2" loading="lazy" />
+            </div>
+            <div class="gallery-item" data-index="2">
+              <img src="https://res.cloudinary.com/dthg9wo6r/image/upload/v1774804755/incendio-baldio-v-2_vnvvmf.jpg"
+                   alt="Incendio baldío Lucas Funes — foto 3" loading="lazy" />
+            </div>
+            <div class="gallery-item" data-index="3">
+              <img src="https://res.cloudinary.com/dthg9wo6r/image/upload/v1774804755/incendio-baldio-c-1_r3w3e0.jpg"
+                   alt="Incendio baldío Lucas Funes — foto 4" loading="lazy" />
+            </div>
+            <div class="gallery-item" data-index="4">
+              <img src="https://res.cloudinary.com/dthg9wo6r/image/upload/v1774804754/incendio-baldio-v-3_v8ssku.jpg"
+                   alt="Incendio baldío Lucas Funes — foto 5" loading="lazy" />
+            </div>
+          </div>
+          <p class="gallery-hint">← Deslizá para ver todas las fotos · Hacé clic para ampliar →</p>
+        </div>
+
+        <!-- ── VIDEO ── -->
+        <h2>Registro en video</h2>
+        <div class="article-video-embed">
+          <iframe
+            src="https://www.youtube.com/embed/m5kpmzelEk0"
+            title="Registro de incendio en baldío — Calle Lucas Funes 2045, Barrio Platense"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+      </div>
+
+      <hr class="article-divider" />
+      <p class="article-powered">POWERED BY CLAUDE · Anthropic AI</p>
+
+    </article>
+  </main>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <strong>Agencia Gubernamental de Control</strong><br />
+        Secretaría de Control Público · Municipalidad de Reconquista, Santa Fe
+      </div>
+      <div class="footer-powered">
+        POWERED BY CLAUDE · Anthropic AI
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── LIGHTBOX JS ───────────────────────────────────────── -->
+  <script>
+    const images = Array.from(document.querySelectorAll('.gallery-item img'))
+      .map(img => img.src);
+    let current = 0;
+
+    const overlay  = document.getElementById('lightbox');
+    const lbImg    = document.getElementById('lb-img');
+    const lbCounter = document.getElementById('lb-counter');
+
+    function openLightbox(index) {
+      current = index;
+      lbImg.src = images[current];
+      lbCounter.textContent = (current + 1) + ' / ' + images.length;
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function navigate(dir) {
+      current = (current + dir + images.length) % images.length;
+      lbImg.src = images[current];
+      lbCounter.textContent = (current + 1) + ' / ' + images.length;
+    }
+
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      item.addEventListener('click', () => openLightbox(+item.dataset.index));
+    });
+
+    document.getElementById('lb-close').addEventListener('click', closeLightbox);
+    document.getElementById('lb-prev').addEventListener('click', () => navigate(-1));
+    document.getElementById('lb-next').addEventListener('click', () => navigate(1));
+    overlay.addEventListener('click', e => { if (e.target === overlay) closeLightbox(); });
+
+    document.addEventListener('keydown', e => {
+      if (!overlay.classList.contains('active')) return;
+      if (e.key === 'Escape')      closeLightbox();
+      if (e.key === 'ArrowLeft')   navigate(-1);
+      if (e.key === 'ArrowRight')  navigate(1);
+    });
+
+    // Drag scroll en el carrusel
+    const gallery = document.getElementById('gallery');
+    let isDown = false, startX, scrollLeft;
+    gallery.addEventListener('mousedown', e => {
+      isDown = true; startX = e.pageX - gallery.offsetLeft; scrollLeft = gallery.scrollLeft;
+    });
+    gallery.addEventListener('mouseleave', () => isDown = false);
+    gallery.addEventListener('mouseup',    () => isDown = false);
+    gallery.addEventListener('mousemove',  e => {
+      if (!isDown) return;
+      e.preventDefault();
+      gallery.scrollLeft = scrollLeft - (e.pageX - gallery.offsetLeft - startX);
+    });
+  </script>
+
+</body>
+</html>
