@@ -41,6 +41,7 @@
   "fecha": "27/03/2026",
   "imagen": "https://res.cloudinary.com/dthg9wo6r/image/upload/v1774618092/41-4179_tedi1b.jpg",
   "archivo": "articulos/2026-03-notificacion-higiene-barbosa.html",
+   "destacada": false
 },
   {
     "id": "2026-03-Capacitación-inspectores",
