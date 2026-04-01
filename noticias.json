@@ -8,7 +8,7 @@
   "fecha": "29/03/2026",
   "imagen": "https://res.cloudinary.com/dthg9wo6r/image/upload/v1774803874/incendio-baldio-lucasfunes_ax3h2s.jpg",
   "archivo": "articulos/2026-03-incendio-baldio-lucas-funes-2045.html",
-  "destacada": true
+  "destacada": false
 },
   {
   "id": "2026-04-control-venta-medicamentos-farmacias",
@@ -19,7 +19,7 @@
   "fecha": "01/04/2026",
   "imagen": "https://res.cloudinary.com/dthg9wo6r/image/upload/v1775058268/reunion-1_s2yths.jpg",
   "archivo": "articulos/2026-04-control-venta-medicamentos-farmacias.html",
-  "destacada": false
+  "destacada": true
 },
   {
   "id": "2026-03-peligro-derrumbe-amanebar-1219",
