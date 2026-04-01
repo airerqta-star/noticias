@@ -1,16 +1,5 @@
 [
-{
-  "id": "2026-03-incendio-baldio-lucas-funes-2045",
-  "titulo": "Incendio en baldío de calle Lucas Funes 2045, Barrio Platense",
-  "resumen": "Bomberos controló un incendio de pastizal en Lucas Funes 2045. Inspección General registró el evento y procederá a notificar a los propietarios del inmueble y de los lotes linderos.",
-  "area": "Inspección General",
-  "autor": "Agencia Gubernamental de Control",
-  "fecha": "29/03/2026",
-  "imagen": "https://res.cloudinary.com/dthg9wo6r/image/upload/v1774803874/incendio-baldio-lucasfunes_ax3h2s.jpg",
-  "archivo": "articulos/2026-03-incendio-baldio-lucas-funes-2045.html",
-  "destacada": false
-},
-  {
+ {
   "id": "2026-04-control-venta-medicamentos-farmacias",
   "titulo": "Reconquista avanza en el control de venta de medicamentos fuera de farmacias",
   "resumen": "La Secretaría de Control Público reunió a referentes farmacéuticos para implementar la Ordenanza 8.213/18. Se desplegará un plan de cinco fases que va desde la prevención y sensibilización hasta clausuras por reincidencia.",
@@ -22,6 +11,17 @@
   "destacada": true
 },
   {
+  "id": "2026-03-incendio-baldio-lucas-funes-2045",
+  "titulo": "Incendio en baldío de calle Lucas Funes 2045, Barrio Platense",
+  "resumen": "Bomberos controló un incendio de pastizal en Lucas Funes 2045. Inspección General registró el evento y procederá a notificar a los propietarios del inmueble y de los lotes linderos.",
+  "area": "Inspección General",
+  "autor": "Agencia Gubernamental de Control",
+  "fecha": "29/03/2026",
+  "imagen": "https://res.cloudinary.com/dthg9wo6r/image/upload/v1774803874/incendio-baldio-lucasfunes_ax3h2s.jpg",
+  "archivo": "articulos/2026-03-incendio-baldio-lucas-funes-2045.html",
+  "destacada": false
+},
+ {
   "id": "2026-03-peligro-derrumbe-amanebar-1219",
   "titulo": "Peligro de derrumbe de alero en calle Amanebar 1219",
   "resumen": "La AGC intervino ante el riesgo de derrumbe de un alero sobre la línea de vereda. Se solicitó evaluación técnica urgente a Obras Particulares e identificación del titular del inmueble.",
